@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oyisi Sushi - Premium Sushi Experience</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/logo.jpg"
+            alt="Oyisi Sushi Logo"
+            class="navbar-logo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          />
+          <span style="display: none">Oyisi Sushi</span>
+          Oyisi Sushi
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#locations">Vores Lokationer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#concept">Sushi Ad Libitum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Om Os</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/Md--gKO-iGw?autoplay=1&mute=1&loop=1&playlist=Md--gKO-iGw&controls=0&showinfo=0"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="fade-in-up">Oyisi Sushi</h1>
+        <p class="lead fade-in-up">
+          Oplev vores unikke Ad Libitum koncept med frisk sushi, varme retter og
+          søde sager
+        </p>
+      </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Vores Lokationer</h2>
+        <div class="row" id="locationContainer">
+          <!-- Locations will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Libitum Concept Section -->
+    <section id="concept" class="content-section concept-section">
+      <div class="container">
+        <h2 class="section-title">Sushi Ad Libitum</h2>
+        <div class="row align-items-center">
+          <div class="col-md-7">
+            <div class="concept-text">
+              <h3>Sådan fungerer det:</h3>
+              <p>
+                Med vores ad libitum koncept får I et bredt udvalg af lækker
+                frisklavet sushi, varme retter, sticks og søde sager.
+              </p>
+              <p><strong>1.</strong> I har bordet i 2 timer</p>
+              <p>
+                <strong>2.</strong> I bestiller alt fra tablets der findes ved
+                bordet
+              </p>
+              <p>
+                <strong>3.</strong> Bestillingen kommer til køkkenet og kokkene
+                laver straks din ordre
+              </p>
+              <p><strong>4.</strong> Bestil alle de gange I har lyst</p>
+              <p>
+                <em
+                  >*Husk vores madspildspolitik, hvor I max må levne 3 stk.
+                  sushi, forretter, sticks m.m. pr. bord.</em
+                >
+              </p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="concept-images">
+              <img
+                src="images/concept-images/ad-libitum-1.jpg"
+                class="concept-image"
+                alt="Ad Libitum Concept"
+                onerror="this.src='images/logo.jpg'"
+                src="images/concept-images/ad-libitum-2.jpg"
+                class="concept-image"
+                alt="Ad Libitum Dining"
+                onerror="this.src='images/logo.jpg'"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section about-section">
+      <div class="container">
+        <h2 class="section-title">Om Os</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <div>
+              <h3>Kvalitet og Service</h3>
+              <p>
+                Hos Oyisi Sushi laver vi kvalitets sushi til fornuftige priser.
+                Vi lever af glade og tilfredse kunder – og derfor bestræber vi
+                os altid på at yde en god service og hurtig ekspedering.
+              </p>
+              <p>
+                Vores kokke er uddannede sushikokke og har mange års erfaring
+                med at lave sushi, der smager skønt. Med andre ord så får du
+                udsøgt sushi, som er tilberedt med kærlighed og stolthed.
+              </p>
+              <p>
+                Vi bruger kun de friskeste råvarer i vores sushi, udvalgt hver
+                dag for at sikre optimal smag og kvalitet.
+              </p>
+            </div>
+            <div>
+              <h3>Rabatter</h3>
+              <p>
+                Hos Oyisi Sushi har vi forskellige rabatter, såsom studierabat
+                og fødselsdagsrabat. Læs mere under hvert enkelt by, for at se
+                hvad hver især tilbyder af rabat.
+              </p>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/concept-images/about-us-1.jpg"
+              class="about-image"
+              alt="About Us"
+              onerror="this.src='images/logo.jpg'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-logo">
+              <img
+                src="images/logo.jpg"
+                alt="Oyisi Sushi Logo"
+                onerror="this.style.display='none'"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <p><a href="#concept">Ad Libitum Koncept</a></p>
+            <p><a href="#about">Om Os</a></p>
+            <p><a href="#locations">Lokationer</a></p>
+          </div>
+          <div class="col-md-4">
+            <h5>Allergi Information</h5>
+            <p>
+              Kontakt os hvis du har spørgsmål vedr. allergene ingredienser i
+              vores retter.
+            </p>
+            <p>
+              <a href="https://aabenraa.oyisi.dk/handelsbetingelser/"
+                ><i class="fab"></i> Handelsbetingelser</a
+              >
+            </p>
+            <p>
+              <a href="https://aabenraa.oyisi.dk/privatlivspolitik/"
+                ><i class="fab"></i> Privatlivs- og cookiepolitik</a
+              >
+            </p>
+          </div>
+        </div>
+        <hr style="border-color: rgba(175, 30, 33, 0.3)" />
+        <div class="text-center">
+          <p>&copy; 2025 Oyisi Sushi. Alle rettigheder forbeholdes.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
