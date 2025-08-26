@@ -24,9 +24,9 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top" id="top">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#top">
           <img
             src="images/logo.jpg"
             alt="Oyisi Sushi Logo"
@@ -44,16 +44,97 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#locations">Vores Lokationer</a>
+            <!-- Restauranter Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="restauranterDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Restauranter
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="restauranterDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://oyisi-aabenraa.dk"
+                    target="_blank"
+                    >Aabenraa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://oyisi-tønder.dk"
+                    target="_blank"
+                    >Tønder</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://oyisi-esbjerg.dk"
+                    target="_blank"
+                    >Esbjerg</a
+                  >
+                </li>
+              </ul>
             </li>
+
+            <!-- Book Bord Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="bookBordDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Book Bord
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="bookBordDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://oyisi-aabenraa.dk/bordbestilling/"
+                    target="_blank"
+                    >Aabenraa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://oyisi-tønder.dk/bordbestilling"
+                    target="_blank"
+                    >Tønder</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://oyisi-esbjerg.dk/bordbestilling"
+                    target="_blank"
+                    >Esbjerg</a
+                  >
+                </li>
+              </ul>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#concept">Sushi Ad Libitum</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">Om Os</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -70,11 +151,7 @@
       ></iframe>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 class="fade-in-up">Oyisi Sushi</h1>
-        <p class="lead fade-in-up">
-          Oplev vores unikke Ad Libitum koncept med frisk sushi, varme retter og
-          søde sager
-        </p>
+        <!-- Add title and text on hero here -->
       </div>
     </section>
 
@@ -125,6 +202,8 @@
                 class="concept-image"
                 alt="Ad Libitum Concept"
                 onerror="this.src='images/logo.jpg'"
+              />
+              <img
                 src="images/concept-images/ad-libitum-2.jpg"
                 class="concept-image"
                 alt="Ad Libitum Dining"
@@ -146,7 +225,7 @@
               <h3>Kvalitet og Service</h3>
               <p>
                 Hos Oyisi Sushi laver vi kvalitets sushi til fornuftige priser.
-                Vi lever af glade og tilfredse kunder – og derfor bestræber vi
+                Vi lever af glade og tilfredse kunder - og derfor bestræber vi
                 os altid på at yde en god service og hurtig ekspedering.
               </p>
               <p>
@@ -183,42 +262,118 @@
     <!-- Footer -->
     <footer id="contact" class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="footer-logo">
-              <img
-                src="images/logo.jpg"
-                alt="Oyisi Sushi Logo"
-                onerror="this.style.display='none'"
-              />
+        <div class="footer-content">
+          <!-- Logo Section -->
+          <div class="footer-logo-section">
+            <img
+              src="images/logo.jpg"
+              alt="Oyisi Sushi Logo"
+              class="footer-logo-img"
+              onerror="this.style.display='none'"
+            />
+          </div>
+
+          <!-- Locations Grid -->
+          <div class="footer-locations-grid">
+            <!-- Aabenraa -->
+            <div class="footer-location">
+              <h4>Oyisi Sushi</h4>
+              <h5>Aabenraa</h5>
+              <p class="location-address">
+                Nørreport 4B, 1tv,<br />
+                6200 Aabenraa
+              </p>
+              <p class="location-phone">+45 73 62 59 59</p>
+              <p class="location-email">oyisi200@gmail.com</p>
+              <div class="location-links">
+                <a
+                  href="https://esmiley.dk/oyisi-aabenraa"
+                  target="_blank"
+                  class="smiley-link"
+                  >Smiley rapport</a
+                >
+                <a
+                  href="https://oyisi-aabenraa.dk"
+                  target="_blank"
+                  class="more-link"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+
+            <!-- Tønder -->
+            <div class="footer-location">
+              <h4>Oyisi Sushi</h4>
+              <h5>Tønder</h5>
+              <p class="location-address">
+                Storegade 1,<br />
+                6270 Tønder
+              </p>
+              <p class="location-phone">+45 50 70 62 70</p>
+              <p class="location-email">oyisi270@gmail.com</p>
+              <div class="location-links">
+                <a
+                  href="https://esmiley.dk/oyisi-tonder"
+                  target="_blank"
+                  class="smiley-link"
+                  >Smiley rapport</a
+                >
+                <a
+                  href="https://oyisi-tønder.dk"
+                  target="_blank"
+                  class="more-link"
+                  >Læs mere</a
+                >
+              </div>
+            </div>
+
+            <!-- Esbjerg -->
+            <div class="footer-location">
+              <h4>Oyisi Sushi</h4>
+              <h5>Esbjerg</h5>
+              <p class="location-address">
+                Grådybet 73c,<br />
+                6700 Esbjerg
+              </p>
+              <p class="location-phone">+45 47 47 67 00</p>
+              <p class="location-email">oyisi700@gmail.com</p>
+              <div class="location-links">
+                <a
+                  href="https://esmiley.dk/oyisi-esbjerg"
+                  target="_blank"
+                  class="smiley-link"
+                  >Smiley rapport</a
+                >
+                <a
+                  href="https://oyisi-esbjerg.dk"
+                  target="_blank"
+                  class="more-link"
+                  >Læs mere</a
+                >
+              </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <h5>Quick Links</h5>
-            <p><a href="#concept">Ad Libitum Koncept</a></p>
-            <p><a href="#about">Om Os</a></p>
-            <p><a href="#locations">Lokationer</a></p>
-          </div>
-          <div class="col-md-4">
-            <h5>Allergi Information</h5>
+
+          <!-- Allergi Information -->
+          <div class="footer-info-section">
+            <h4>ALLERGI INFORMATION</h4>
             <p>
               Kontakt os hvis du har spørgsmål vedr. allergene ingredienser i
               vores retter.
             </p>
-            <p>
+            <div class="footer-links">
               <a href="https://aabenraa.oyisi.dk/handelsbetingelser/"
-                ><i class="fab"></i> Handelsbetingelser</a
+                >Handelsbetingelser</a
               >
-            </p>
-            <p>
               <a href="https://aabenraa.oyisi.dk/privatlivspolitik/"
-                ><i class="fab"></i> Privatlivs- og cookiepolitik</a
+                >Privatlivs- og cookiepolitik</a
               >
-            </p>
+            </div>
           </div>
         </div>
-        <hr style="border-color: rgba(175, 30, 33, 0.3)" />
-        <div class="text-center">
+
+        <hr class="footer-divider" />
+        <div class="footer-copyright">
           <p>&copy; 2025 Oyisi Sushi. Alle rettigheder forbeholdes.</p>
         </div>
       </div>
