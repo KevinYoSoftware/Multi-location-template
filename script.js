@@ -20,7 +20,7 @@ const locationData = [
       booking: "https://oyisi-aabenraa.dk/bordbestilling/",
       facebook: "https://facebook.com/oyisi.aabenraa",
       instagram: "https://www.instagram.com/oyisisushi.aabenraa/",
-      eSmiley: "https://esmiley.dk/oyisi-aabenraa",
+      eSmiley: "https://www.findsmiley.dk/757534",
     },
   },
   {
@@ -41,7 +41,7 @@ const locationData = [
       booking: "https://oyisi-tønder.dk/bordbestilling",
       facebook: "https://www.facebook.com/oyisisushi.toender/",
       instagram: "https://www.instagram.com/oyisisushi.toender/",
-      eSmiley: "https://esmiley.dk/oyisi-tonder",
+      eSmiley: "https://www.findsmiley.dk/1418111",
     },
   },
   {
@@ -64,7 +64,7 @@ const locationData = [
       booking: "https://oyisi-esbjerg.dk/bordbestilling",
       facebook: "https://www.facebook.com/oyisisushi.esbjerg/",
       instagram: "https://www.instagram.com/oyisisushi.esbjerg/",
-      eSmiley: "https://esmiley.dk/oyisi-esbjerg",
+      eSmiley: "https://www.findsmiley.dk/1476706",
     },
   },
 ];
