@@ -208,10 +208,58 @@ function renderLocationCards() {
     locationContainer.appendChild(cardElement);
   });
 }
+function generateFooterLocations() {
+  const footerGrid = document.querySelector(".footer-locations-grid");
+
+  if (!footerGrid) {
+    console.error("Footer locations grid not found");
+    return;
+  }
+
+  // Clear existing content
+  footerGrid.innerHTML = "";
+
+  // Generate location sections from locationData
+  locationData.forEach((location) => {
+    const locationSection = document.createElement("div");
+    locationSection.className = "footer-location";
+
+    // Extract address parts (remove postal code and city for display)
+    const addressParts = location.address.split(",");
+    const streetAddress = addressParts[0].trim();
+    const postalAndCity = addressParts.slice(1).join(",").trim();
+
+    locationSection.innerHTML = `
+      <h4>${restaurantConfig.name}</h4>
+      <h5>${location.name}</h5>
+      <p class="location-address">
+        ${streetAddress}<br/>
+        ${postalAndCity}
+      </p>
+      <p class="location-phone">${location.phone}</p>
+      <p class="location-email">${location.email}</p>
+      <div class="location-links">
+        <a href="${location.links.eSmiley}" 
+           target="_blank" 
+           class="smiley-link">
+          Smiley rapport
+        </a>
+        <a href="${location.links.website}" 
+           target="_blank" 
+           class="more-link">
+          Læs mere
+        </a>
+      </div>
+    `;
+
+    footerGrid.appendChild(locationSection);
+  });
+}
 
 function initializeApp() {
   renderLocationCards();
   initializeSmoothScrolling();
+  generateFooterLocations();
 }
 
 document.addEventListener("DOMContentLoaded", initializeApp);
