@@ -9,7 +9,7 @@ const locationData = [
     subtitle: "Nørregade 48B, 1tv",
     address: "Nørregade 48B, 1tv, 6200 Aabenraa",
     phone: "+45 73 62 59 59",
-    email: "oyisi200@gmail.com",
+    email: "oyisi6200@gmail.com",
     image: "images/Aabenraa.jpg",
     openingHours: {
       "Mandag - Søndag": "16:00 - 22:00",
@@ -29,7 +29,7 @@ const locationData = [
     subtitle: "Storegade 1",
     address: "Storegade 1, 6270 Tønder",
     phone: "+45 50 70 62 70",
-    email: "oyisi270@gmail.com",
+    email: "oyisi6270@gmail.com",
     image: "images/Toender.jpg",
     openingHours: {
       Mandag: "16:00 - 21:00",
@@ -50,7 +50,7 @@ const locationData = [
     subtitle: "Grådybet 73c",
     address: "Grådybet 73c, 6700 Esbjerg",
     phone: "+45 47 47 67 00",
-    email: "oyisi700@gmail.com",
+    email: "oyisi6700@gmail.com",
     image: "images/Esbjerg.jpg",
     openingHours: {
       Mandag: "16:00 - 21:30",
