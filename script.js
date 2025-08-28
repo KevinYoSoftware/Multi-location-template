@@ -85,8 +85,7 @@ function createLocationCard(location) {
         <div class="card-overlay">
           <!-- Title section with compact transparent background -->
           <div class="card-header-section">
-            <div class="card-title">${restaurantConfig.name}</div>
-            <div class="card-subtitle">${location.name}</div>
+            <div class="card-title">${location.name}</div>
           </div>
           
           <!-- Buttons at bottom - left and right -->

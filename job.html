@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job - Oyisi Sushi</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Custom dropdown styling */
+      .custom-select-wrapper {
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto 2rem auto;
+      }
+
+      .custom-select {
+        width: 100%;
+        padding: 1rem 3rem 1rem 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        background: white;
+        border: 3px solid #e9ecef;
+        border-radius: 12px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23af1e21' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 20px;
+      }
+
+      .custom-select:hover {
+        border-color: var(--primary-red);
+      }
+
+      .custom-select:focus {
+        outline: none;
+        border-color: var(--primary-red);
+        box-shadow: 0 0 0 0.2rem rgba(175, 30, 33, 0.15);
+      }
+
+      .custom-select option {
+        padding: 1rem;
+        font-weight: 500;
+      }
+
+      .custom-select option:disabled {
+        color: #999;
+        font-style: italic;
+      }
+
+      .restaurant-info {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+      }
+
+      .restaurant-info.show {
+        opacity: 1;
+        max-height: 200px;
+      }
+
+      .restaurant-info h5 {
+        color: var(--primary-red);
+        margin-bottom: 0.75rem;
+        font-size: 1.2rem;
+      }
+
+      .restaurant-info p {
+        margin-bottom: 0.5rem;
+        color: #666;
+      }
+
+      .send-btn {
+        background: var(--primary-red);
+        color: white;
+        border: none;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(175, 30, 33, 0.2);
+      }
+
+      .send-btn:hover:not(:disabled) {
+        background: var(--primary-dark-red);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(175, 30, 33, 0.3);
+      }
+
+      .send-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .send-btn i {
+        margin-right: 0.5rem;
+      }
+
+      .form-label {
+        font-weight: 600;
+        color: var(--primary-red);
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        .custom-select {
+          font-size: 1rem;
+          padding: 0.875rem 2.5rem 0.875rem 1.25rem;
+        }
+
+        .send-btn {
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/logo.jpg"
+            alt="Oyisi Sushi Logo"
+            class="navbar-logo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';"
+          />
+          <span style="display: none">Oyisi Sushi</span>
+          Oyisi Sushi
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Forside</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="content-section" style="margin-top: 76px; padding: 4rem 0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="content-wrapper"
+              style="
+                background: white;
+                border-radius: var(--border-radius);
+                padding: 3rem;
+                box-shadow: var(--shadow-soft);
+              "
+            >
+              <h1 class="section-title" style="margin-bottom: 2rem">
+                Bliv en del af Oyisi Sushi
+              </h1>
+
+              <div
+                class="job-content"
+                style="color: var(--text-dark); line-height: 1.7"
+              >
+                <div
+                  class="job-intro"
+                  style="text-align: center; margin-bottom: 3rem"
+                >
+                  <h3 style="color: var(--primary-red); margin-bottom: 1.5rem">
+                    Vil du være en del af Oyisi Sushi restaurantkæder?
+                  </h3>
+                  <p style="font-size: 1.1rem; margin-bottom: 1rem">
+                    Møder du verden med et smil? Er du oppe på tæerne og nede på
+                    jorden?
+                  </p>
+                  <p>
+                    Vi lægger vægt på, at jobbet hos Oyisi skal være sjovt og
+                    varieret, at alle skal føle sig som en del af teamet.
+                  </p>
+                  <p>
+                    Vi har løbende brug for ambitiøse og kvalificerede
+                    medarbejdere.
+                  </p>
+                  <p>
+                    <strong
+                      >Og så skal der selvfølgelig også være plads til fritids-
+                      og familieliv.</strong
+                    >
+                  </p>
+                </div>
+
+                <div class="application-section">
+                  <h3
+                    style="
+                      color: var(--primary-red);
+                      margin-bottom: 1.5rem;
+                      text-align: center;
+                    "
+                  >
+                    Send din ansøgning
+                  </h3>
+
+                  <div
+                    style="
+                      background: var(--neutral-light);
+                      padding: 2.5rem;
+                      border-radius: 12px;
+                      margin-bottom: 2rem;
+                    "
+                  >
+                    <div class="form-label">Vælg restaurant:</div>
+
+                    <div class="custom-select-wrapper">
+                      <select id="restaurantSelect" class="custom-select">
+                        <option value="" disabled selected>
+                          Vælg en restaurant...
+                        </option>
+                        <option value="aabenraa">
+                          Aabenraa - Nørreport 4B
+                        </option>
+                        <option value="tonder">Tønder - Storegade 1</option>
+                        <option value="esbjerg">Esbjerg - Grådybet 73c</option>
+                      </select>
+                    </div>
+
+                    <div id="restaurantInfo" class="restaurant-info">
+                      <!-- Info will be populated by JavaScript -->
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        id="sendBtn"
+                        class="send-btn"
+                        onclick="sendApplication()"
+                        disabled
+                      >
+                        <i class="fas fa-paper-plane"></i> Send ansøgning
+                      </button>
+                      <p
+                        style="margin-top: 1rem; font-size: 0.9rem; color: #666"
+                      >
+                        Husk at vedhæfte CV & din ansøgning.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const restaurantData = {
+        aabenraa: {
+          name: "Oyisi Sushi Aabenraa",
+          address: "Nørreport 4B, 1tv",
+          city: "6200 Aabenraa",
+          email: "oyisi200@gmail.com",
+        },
+        tonder: {
+          name: "Oyisi Sushi Tønder",
+          address: "Storegade 1",
+          city: "6270 Tønder",
+          email: "oyisi270@gmail.com",
+        },
+        esbjerg: {
+          name: "Oyisi Sushi Esbjerg",
+          address: "Grådybet 73c",
+          city: "6700 Esbjerg",
+          email: "oyisi700@gmail.com",
+        },
+      };
+
+      const selectElement = document.getElementById("restaurantSelect");
+      const infoElement = document.getElementById("restaurantInfo");
+      const sendBtn = document.getElementById("sendBtn");
+
+      selectElement.addEventListener("change", function () {
+        const selectedValue = this.value;
+
+        if (selectedValue) {
+          const restaurant = restaurantData[selectedValue];
+
+          // Update info display
+          infoElement.innerHTML = `
+            <h5>${restaurant.name}</h5>
+            <p><i class="fas fa-map-marker-alt"></i> ${restaurant.address}, ${restaurant.city}</p>
+            <p><i class="fas fa-envelope"></i> ${restaurant.email}</p>
+          `;
+
+          // Show info with animation
+          infoElement.classList.add("show");
+
+          // Enable send button
+          sendBtn.disabled = false;
+        } else {
+          infoElement.classList.remove("show");
+          sendBtn.disabled = true;
+        }
+      });
+
+      function sendApplication() {
+        const selectedValue = selectElement.value;
+
+        if (!selectedValue) {
+          alert("Vælg venligst en restaurant.");
+          return;
+        }
+
+        const restaurant = restaurantData[selectedValue];
+        const subject = `Jobansøgning - ${restaurant.name}`;
+        const mailtoLink = `mailto:${
+          restaurant.email
+        }?subject=${encodeURIComponent(subject)}`;
+
+        // Open email client
+        window.location.href = mailtoLink;
+
+        // Show fallback message after a short delay
+        setTimeout(() => {
+          const fallbackDiv = document.createElement("div");
+          fallbackDiv.style.cssText =
+            "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); z-index: 9999; max-width: 500px; text-align: center;";
+          fallbackDiv.innerHTML = `
+            <h4 style="color: var(--primary-red); margin-bottom: 1rem;">Kunne ikke åbne mail program?</h4>
+            <p style="margin-bottom: 1.5rem;">Send din ansøgning til:</p>
+            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; font-family: monospace;">
+              ${restaurant.email}
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">Emne: ${subject}</p>
+            <button onclick="this.parentElement.remove()" class="btn btn-primary" style="background: var(--primary-red); border: none;">Luk</button>
+          `;
+          document.body.appendChild(fallbackDiv);
+
+          // Auto remove after 10 seconds
+          setTimeout(() => {
+            if (fallbackDiv.parentElement) {
+              fallbackDiv.remove();
+            }
+          }, 10000);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
