@@ -84,9 +84,11 @@ function createLocationCard(location) {
         
         <div class="card-overlay">
           <!-- Title section with compact transparent background -->
-          <div class="card-header-section">
+          <a href="${
+            location.links.website
+          }" class="card-header-section" target="_blank">
             <div class="card-title">${location.name}</div>
-          </div>
+          </a>
           
           <!-- Buttons at bottom - left and right -->
           <div class="card-buttons-row">

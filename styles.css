@@ -403,6 +403,15 @@ body {
   margin-top: 1rem;
   display: inline-block;
   max-width: fit-content;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-header-section:hover {
+  background: rgba(0, 0, 0, 0.8); 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 .card-buttons-row {
   display: flex;
